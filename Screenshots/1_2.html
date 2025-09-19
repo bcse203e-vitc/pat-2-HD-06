@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Toggle Dark Mode</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            body{
+                background: white;
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+                text-align: center;
+                margin-top: 100px;
+            }
+            .dark{
+                background: black;
+                color: white;
+            }
+        </style>
+    </head>
+<body>
+    <h1>This is  the Toggle Mode</h1>
+    <button id="toggle">Toggle Mode</button>
+    <script>
+        $(function(){
+            $("#toggle").click(function(){
+                $("body").toggleClass("dark");
+            });
+        });
+    </script>
+</body>
+</html>

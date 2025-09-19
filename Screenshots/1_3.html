@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Username Validation</title>
+    </head>
+    <body>
+        <input type="text" id="uname" placeholder="Enter Username">
+        <p id="msg"></p>
+    </body>
+    <script>
+        const regex=/^[A-Za-z0-9_]+$/;
+        document.getElementById("uname").onblur= function(){
+            const msg=document.getElementById("msg");
+            if(regex.test(this.value)){
+                msg.textContent="Valid Username";
+                msg.style.color="green";
+            }
+            else{
+                msg.textContent="Invalid Username";
+                msg.style.color="red";
+            }
+        }
+    </script>
+</html>
